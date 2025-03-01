@@ -23,6 +23,10 @@ export default function AppLayout() {
   return (
     <Stack>
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="deeplink/[deeplink]"
+        options={{ headerShown: true, presentation: "modal" }}
+      />
     </Stack>
   );
 }
