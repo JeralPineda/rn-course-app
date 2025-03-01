@@ -1,8 +1,15 @@
 import { createContext, useContext, useState } from "react";
 
-type User = {
+export enum UserRole {
+  Admin = "admin",
+  User = "user",
+  Guest = "guest",
+}
+
+export type User = {
   name: string;
   email: string;
+  role: UserRole;
 };
 
 type AuthContext = {
@@ -30,9 +37,10 @@ export function AuthContextProvider({
       setUser({
         name: "Jeral",
         email: "jeral@gmail.com",
+        role: UserRole.User,
       });
     } catch (error) {
-      alert("Something wen awrong");
+      alert("Something went awrong");
     } finally {
       setIsLoading(false);
     }
