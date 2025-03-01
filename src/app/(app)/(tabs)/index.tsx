@@ -1,11 +1,16 @@
-import { StyleSheet, View } from "react-native";
+import { Button, StyleSheet, View } from "react-native";
 
 import { ThemedText } from "@/components/ThemedText";
+import { useAuth } from "@/context/auth";
 
 export default function HomeScreen() {
+  const { user, setUser } = useAuth();
+
   return (
     <View style={styles.container}>
       <ThemedText type="title">Home Screen</ThemedText>
+      <ThemedText>{JSON.stringify(user, null, 2)}</ThemedText>
+      <Button title="Sign out" color="red" onPress={() => setUser(undefined)} />
     </View>
   );
 }
