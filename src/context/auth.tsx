@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 export enum UserRole {
   Admin = "admin",
@@ -29,6 +29,10 @@ export function AuthContextProvider({
 }) {
   const [user, setUser] = useState<User | undefined>(undefined);
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    login();
+  }, []);
 
   async function login() {
     try {
