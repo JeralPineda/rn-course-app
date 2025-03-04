@@ -33,45 +33,42 @@ export default function TabLayout() {
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
       <Tabs.Screen
         name="gestures-animations"
         options={{
           title: "Gest/Anim",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="move.3d" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="move.3d" color={color} />,
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
           title: "Explore",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="variables"
+        options={{
+          title: "Env Variables",
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="lock" color={color} />,
         }}
       />
       <Tabs.Screen
         name="admin"
         options={{
           title: "Admin",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="person.fill" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.fill" color={color} />,
         }}
       />
       <Tabs.Screen
         name="guest"
         options={{
           title: "Guest",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="person.fill" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.fill" color={color} />,
         }}
         redirect={user?.role !== UserRole.Guest}
       />
