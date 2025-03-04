@@ -8,7 +8,9 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      <ThemedText type="title">Home Screen</ThemedText>
+      <ThemedText type="title" testID="home">
+        Home
+      </ThemedText>
 
       <ThemedText>{JSON.stringify(user, null, 2)}</ThemedText>
       <Button title="Sign out" color="red" onPress={() => setUser(undefined)} />
