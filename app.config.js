@@ -5,6 +5,7 @@ const myUrl = environment === "development" ? "http://localhost:8081" : "https:/
 export default {
   name: "rn-course-app",
   slug: "rn-course-app",
+  owner: "jeral495",
   version: "1.0.0",
   orientation: "portrait",
   icon: "./src/assets/images/icon.png",
@@ -13,9 +14,13 @@ export default {
   newArchEnabled: true,
   ios: {
     supportsTablet: true,
-    bundleIdentifier: "com.jeral495.rn-course-app",
+    bundleIdentifier: "com.jeral495.rncourseapp",
+    infoPlist: {
+      ITSAppUsesNonExemptEncryption: false,
+    },
   },
   android: {
+    package: "com.jeral495.rncourseapp",
     adaptiveIcon: {
       foregroundImage: "./src/assets/images/adaptive-icon.png",
       backgroundColor: "#ffffff",
