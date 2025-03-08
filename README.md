@@ -15,3 +15,10 @@ npx uri-scheme open exp://127.0.0.1:8081/--/deeplink/123 --ios
 npx uri-scheme open rncourseapp.jeralpineda://deeplink/123 --ios
 
 ```
+
+## Submit
+
+```ssh
+eas submit -p android --auto-submit
+eas submit --platform ios --auto-submit
+```
