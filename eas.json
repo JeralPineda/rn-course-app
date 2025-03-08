@@ -4,18 +4,45 @@
     "appVersionSource": "remote"
   },
   "build": {
+    "development-client": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "APP_VARIANT": "preview",
+        "EXPO_PUBLIC_API_BASE_URL": "https://jeralpineda-dev-course-app--bd4ge1xjdc.expo.app"
+      }
+    },
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "environment": "development",
+      "channel": "development"
+    },
+    "simulator-ios": {
+      "withoutCredentials": true,
+      "ios": {
+        "simulator": true,
+        "image": "latest"
+      }
+    },
+    "emulator-android": {
+      "withoutCredentials": true,
+      "android": {
+        "buildType": "apk",
+        "image": "latest"
+      }
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "environment": "preview",
+      "autoIncrement": true,
+      "channel": "preview"
     },
     "production": {
       "autoIncrement": true
     },
-    "simulator-ios": {
-      "extends": "development",
+    "test": {
+      "extends": "development-client",
       "ios": {
         "simulator": true
       }
