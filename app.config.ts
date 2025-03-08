@@ -32,7 +32,8 @@ function getEnvironmetValues(): EnvironmentValues {
   };
 }
 
-const myUrl = environment === "development" ? "http://localhost:8081" : "https://jeralpineda.dev";
+const myUrl =
+  environment === "development" ? "http://localhost:8081" : "jeralpineda-dev-course-app--bd4ge1xjdc.expo.app";
 
 export default {
   name: getEnvironmetValues().name,

@@ -10,7 +10,8 @@
       "env": {
         "APP_VARIANT": "preview",
         "EXPO_PUBLIC_API_BASE_URL": "https://jeralpineda-dev-course-app--bd4ge1xjdc.expo.app"
-      }
+      },
+      "channel": "development-client"
     },
     "development": {
       "developmentClient": true,
@@ -23,14 +24,16 @@
       "ios": {
         "simulator": true,
         "image": "latest"
-      }
+      },
+      "channel": "simulator-ios"
     },
     "emulator-android": {
       "withoutCredentials": true,
       "android": {
         "buildType": "apk",
         "image": "latest"
-      }
+      },
+      "channel": "emulator-android"
     },
     "preview": {
       "distribution": "internal",
@@ -46,7 +49,8 @@
       "extends": "development-client",
       "ios": {
         "simulator": true
-      }
+      },
+      "channel": "test"
     }
   },
   "submit": {
